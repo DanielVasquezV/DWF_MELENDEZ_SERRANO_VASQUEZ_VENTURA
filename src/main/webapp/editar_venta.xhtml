@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Editar Venta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</h:head>
+<f:view>
+    <div class="container">
+        <h1 class="mt-5 mb-3">Editar Venta</h1>
+        <h:form>
+
+            <h:inputHidden value="#{ventaBean.nuevaVenta.id}" />
+            <h:messages globalOnly="true" showDetail="true" showSummary="false" class="alert alert-danger"/>
+
+            <div class="mb-3">
+                <h:outputLabel for="videojuego" value="Videojuego:"/>
+                <h:selectOneMenu id="videojuego" value="#{ventaBean.nuevaVenta.idVideojuego}" class="form-select mt-3">
+                    <f:selectItems value="#{ventaBean.videojuegos}" var="videojuego" itemValue="#{videojuego.id}" itemLabel="#{videojuego.nombre}"/>
+                </h:selectOneMenu>
+            </div>
+
+            <div class="mb-3">
+                <h:outputLabel for="fecha" value="Fecha:" class="form-label"/>
+                <h:inputText id="fecha" value="#{ventaBean.nuevaVenta.fecha}" required="true" requiredMessage="La fecha es requerida" class="form-control">
+                    <f:validateRegex pattern="^\d{4}-\d{2}-\d{2}$"/>
+                </h:inputText>
+                <h:message for="fecha" class="text-danger"/>
+            </div>
+
+            <div class="mb-3">
+                <h:outputLabel for="cantidad" value="Cantidad:" class="form-label"/>
+                <h:inputText id="cantidad" value="#{ventaBean.nuevaVenta.cantidad}" class="form-control" validatorMessage="Ingresa un número válido" type="number">
+                    <f:validateDoubleRange minimum="0.01"/>
+                </h:inputText>
+                <h:message for="cantidad" class="text-danger"/>
+            </div>
+
+            <div class="d-flex gap-3">
+                <h:link value="Regresar" outcome="index" class="btn btn-success"/>
+                <h:commandButton value="Aceptar" action="#{ventaBean.editarVenta()}" class="btn btn-primary"/>
+            </div>
+        </h:form>
+    </div>
+</f:view>
+</html>
