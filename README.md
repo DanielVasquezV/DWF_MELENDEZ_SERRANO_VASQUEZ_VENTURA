@@ -29,13 +29,15 @@ CRUD y Webservice implementado con Jakarta Server Faces
 
 ### ¿Cómo consumir el webservice?
 
-1. **Para consultar videojuegos y obtener resultados en formato JSON coloca la siguiente URL en tu navegador:**
+**Para consultar videojuegos y obtener resultados en formato JSON coloca la siguiente URL en tu navegador:**
 `http://<server_host>:<server_port>/<context_path>/webservice/buscar/videojuegos/<videojuego_id>`
+
 *Por ejemplo:*
 `localhost:8080/DWF_MELENDEZ_SERRANO_VASQUEZ_VENTURA-1.0-SNAPSHOT/webservice/buscar/videojuegos/3`
 
-2. **Para consultar ventas y obtener resultados en formato JSON coloca la siguiente URL en tu navegador:**
+**Para consultar ventas y obtener resultados en formato JSON coloca la siguiente URL en tu navegador:**
 `http://<server_host>:<server_port>/<context_path>/webservice/buscar/ventas/<venta_id>`
+
 *Por ejemplo:*
 `localhost:8080/DWF_MELENDEZ_SERRANO_VASQUEZ_VENTURA-1.0-SNAPSHOT/webservice/buscar/ventas/6`
 
