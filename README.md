@@ -3,7 +3,7 @@
 CRUD y Webservice implementado con Jakarta Server Faces
 
 ### Características del proyecto
-- **CRUD:** Crear, Leer, Actualizar y Eliminar para reqgistrar y gestionar videojuegos y ventas de videojuegos.
+- **CRUD:** Crear, Leer, Actualizar y Eliminar. Para registrar y gestionar videojuegos y ventas de videojuegos.
 - **Interfaz de usuario:** Desarrollada con Jakarta Server Faces para una experiencia amigable.
 - **Webservice:** Permite buscar ventas y videojuegos de manera sencilla mediante un ID
   
@@ -17,7 +17,7 @@ CRUD y Webservice implementado con Jakarta Server Faces
 
 1. **Clonar el proyecto**
    ```sh
-   git clone https://github.com/tu_usuario/DWF_MELENDEZ_SERRANO_VASQUEZ_VENTURA.git
+   git clone https://github.com/DanielVasquezV/DWF_MELENDEZ_SERRANO_VASQUEZ_VENTURA.git
    cd DWF_MELENDEZ_SERRANO_VASQUEZ_VENTURA
    
 2. Abrir la carpeta del proyecto con *IntelliJ IDEA*
