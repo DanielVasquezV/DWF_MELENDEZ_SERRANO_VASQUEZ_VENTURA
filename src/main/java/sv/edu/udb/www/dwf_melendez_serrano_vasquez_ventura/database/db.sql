@@ -1,0 +1,17 @@
+CREATE SCHEMA `desafio_1` DEFAULT CHARACTER SET utf8 ;
+CREATE TABLE IF NOT EXISTS  `videojuego` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`nombre` VARCHAR(255) NO NULL,
+	`genero` VARCHAR(100) NOT NULL,
+	`precio` DECIMAL(10,2)NOT NULL,
+	PRIMARY KEY (`id`)
+);
+
+CREATE TABLE IF NOT EXISTS `venta` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`videojuego_id` INT NOT NULL,
+	`fecha` DATE NOT NULL,
+	`cantidad` INT NOT NULL,
+	PRIMARY KEY(`id`),
+	FOREIGN KEY(`videojuego_id`) REFERENCES `videojuego`(`id`) ON DELETE CASCADE
+);
